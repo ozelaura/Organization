@@ -1,0 +1,54 @@
+﻿<Window x:Class="Organizations.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Organizations"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="dgAdatok"
+                  AutoGenerateColumns="False"
+                  Background="LightCyan"
+                  Margin="5"
+                  SelectionChanged="dgAdatok_SelectonChanged">
+            <DataGrid.Columns>
+                
+            </DataGrid.Columns>
+            
+        </DataGrid>
+
+        <Label Content="Országok" Grid.Row="1" VerticalAlignment="Center"
+               Margin="12,5" FontSize="18"/>
+        <ComboBox Grid.Row="1" Width="200" Height="40" x:Name="cbOrszag"
+                  SelectionChanged="cbOrszag_SelectionChanged"/>
+        <Label Content="Év" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"
+               Margin="12,5" FontSize="18"/>
+        <ComboBox Grid.Row="1" Grid.Column="2" Width="200" Height="40" 
+                  x:Name="cbEv" SelectionChanged="cbEv_SelectionChanged"/>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+    </Grid>
+</Window>
